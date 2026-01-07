@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+</head>
+<body>
+
+<h2 id="mode">Mode: Skill Owner</h2>
+<button onclick="switchMode()">Switch Mode</button>
+
+<p id="content">You are offering skills</p>
+
+<script>
+let currentMode = "skill";
+
+function switchMode(){
+  if(currentMode === "skill"){
+    currentMode = "hire";
+    document.getElementById("mode").innerText = "Mode: Hire";
+    document.getElementById("content").innerText = "You are finding people";
+  } else {
+    currentMode = "skill";
+    document.getElementById("mode").innerText = "Mode: Skill Owner";
+    document.getElementById("content").innerText = "You are offering skills";
+  }
+}
+</script>
+
+</body>
+</html>
